@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <title>Clevertap Assistant Plugin Documentation</title>
+    
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Clevertap Assistant Plugin Documentation">
+    <meta name="author" content="Jitendra Sahoo at Clevertap">    
+    <link rel="shortcut icon" href="assets/images/Icon 1.svg"> 
+    
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome JS-->
+    <script defer src="assets/fontawesome/js/all.min.js"></script>
+    
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.2/styles/atom-one-dark.min.css">
+
+    <!-- Theme CSS -->  
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme.css">
+
+</head> 
+
+<body class="docs-page">    
+    <header class="header fixed-top">	    
+        <div class="branding docs-branding">
+            <div class="container-fluid position-relative py-2">
+                <div class="docs-logo-wrapper">
+					<button id="docs-sidebar-toggler" class="docs-sidebar-toggler docs-sidebar-visible mr-2 d-xl-none" type="button">
+	                    <span></span>
+	                    <span></span>
+	                    <span></span>
+	                </button>
+	                <div class="site-logo"><a class="navbar-brand" href="index.html"><img class="logo-icon mr-2" src="assets/images/Icon 1.svg" alt="logo"  style="max-width:50px"><span class="logo-text">CleverTap<span class="text-alt">Assistant</span></span></a></div>    
+                </div><!--//docs-logo-wrapper-->
+	            <div class="docs-top-utilities d-flex justify-content-end align-items-center">
+	                <div class="top-search-box d-none d-lg-flex">
+		                <form class="search-form">
+				            <!-- <input type="text" placeholder="Search the docs..." name="search" class="form-control search-input">
+				            <button type="submit" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button> -->
+				        </form>
+	                </div>
+	
+					<!-- <ul class="social-list list-inline mx-md-3 mx-lg-5 mb-0 d-none d-lg-flex">
+						<li class="list-inline-item"><a href="#"><i class="fab fa-github fa-fw"></i></a></li>
+			            <li class="list-inline-item"><a href="#"><i class="fab fa-twitter fa-fw"></i></a></li>
+		                <li class="list-inline-item"><a href="#"><i class="fab fa-slack fa-fw"></i></a></li>
+		                <li class="list-inline-item"><a href="#"><i class="fab fa-product-hunt fa-fw"></i></a></li>
+		            </ul>//social-list -->
+		            <a href="https://github.com/JideshNair/Clevertap-Assistant/raw/main/CT%20Assistant.zip" class="btn btn-primary d-none d-lg-flex">Download</a>
+	            </div><!--//docs-top-utilities-->
+            </div><!--//container-->
+        </div><!--//branding-->
+    </header><!--//header-->
+    
+    <div class="docs-wrapper">
+	    <div id="docs-sidebar" class="docs-sidebar">
+		    <div class="top-search-box d-lg-none p-3">
+                <form class="search-form">
+		            <input type="text" placeholder="Search the docs..." name="search" class="form-control search-input">
+		            <button type="submit" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
+		        </form>
+            </div>
+		    <nav id="docs-nav" class="docs-nav navbar">
+			    <ul class="section-items list-unstyled nav flex-column pb-3">
+				    <li class="nav-item section-title"><a class="nav-link scrollto active" href="#section-1"><span class="theme-icon-holder mr-2"><i class="fas fa-map-signs"></i></span>Introduction</a></li>
+				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-2"><span class="theme-icon-holder mr-2"><img src="assets/images/J/Install.png" style="max-height: 20px;"></i></span>Installation</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-1">Manual Installation</a></li>
+				    <!-- <li class="nav-item"><a class="nav-link scrollto" href="#item-2-2">Android Plugin Marketplace</a></li> -->
+				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-3"><span class="theme-icon-holder mr-2"><i class="fas fa-box"></i></span>Basic Integration</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-1">Details and Values</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-2">Affected Files</a></li>
+					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-4"><span class="theme-icon-holder mr-2"><i class="fas fa-book-reader"></i></span>Events and User Properties</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-4-1">Add User Properties</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-4-2">Add Custom Events</a></li>
+				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-5"><span class="theme-icon-holder mr-2"><i class="fas fa-cogs"></i></span>Push Notification</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-5-1">Push Integration</a></li>
+					<ul style="list-style-type: none;">
+						<li class="nav-item"><a class="nav-link scrollto" href="#item-5-1-1">Deatils and Values</a></li>
+						<li class="nav-item"><a class="nav-link scrollto" href="#item-5-1-2">Affected Files</a></li>
+						<li class="nav-item"><a class="nav-link scrollto" href="#item-5-1-3">Dashboard Settings</a></li>
+					</ul>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-5-2">Xiaomi Push Integration</a></li>
+					<ul style="list-style-type: none;">
+						<li class="nav-item"><a class="nav-link scrollto" href="#item-5-2-1">Deatils and Values</a></li>
+						<li class="nav-item"><a class="nav-link scrollto" href="#item-5-2-2">Affected Files</a></li>
+						<li class="nav-item"><a class="nav-link scrollto" href="#item-5-2-3">Dashboard Settings</a></li>
+					</ul>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-5-3">Huawei Push Integration</a></li>
+					<ul style="list-style-type: none;">
+						<li class="nav-item"><a class="nav-link scrollto" href="#item-5-3-1">Deatils and Values</a></li>
+						<li class="nav-item"><a class="nav-link scrollto" href="#item-5-3-2">Affected Files</a></li>
+						<li class="nav-item"><a class="nav-link scrollto" href="#item-5-3-3">Dashboard Settings</a></li>
+					</ul>
+				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-6"><span class="theme-icon-holder mr-2"><i class="fas fa-tools"></i></span>Push Amplification</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-6-1">Affected Files</a></li>
+				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-7"><span class="theme-icon-holder mr-2"><i class="fas fa-laptop-code"></i></span>Geofencing</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-7-1">Details and Values</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-7-2">Affected Files</a></li>
+				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-8"><span class="theme-icon-holder mr-2"><i class="fas fa-tablet-alt"></i></span>Audit Report</a></li>
+
+			    </ul>
+
+		    </nav><!--//docs-nav-->
+	    </div><!--//docs-sidebar-->
+	    <div class="docs-content">
+		    <div class="container">
+			    <article class="docs-article" id="section-1">
+				    <header class="docs-header">
+					    <h1 class="docs-heading">Introduction <span class="docs-time">Last updated: 2021-06-18</span></h1>
+					    <section class="docs-intro">
+						    <p>The Clevertap Assistant Plugin was developed specifically as a helping tool to developers to assist them in easy and fast paced integration and use of various functionalities provided by Clevertap into your android appliaction. Fuctionalities such as integration of clevertap into your application, push notifications, geofence etc can be coded inside your application with few easy clicks and the plugin takes care of the code insertion.</p>
+							<p>The plugin can function seamlessly on either java or kotlin being the development environment. Also, even more it contains utilities to speed up coding by adding user and event property code snippet on the go at desired points.</p>
+						</section><!--//docs-intro-->
+				    </header>					
+			    </article>
+			    <article class="docs-article" id="section-2">
+				    <header class="docs-header">
+					    <h1 class="docs-heading">Installation</h1>
+					    <section class="docs-intro">
+						    <p>The CleverTap Assistant Plugin can be set up either by manually insatllng the plugin files into your android studio or you can directly download it from the Android Sudio Plugin Marketplace. Follow the steps below to install the plugin :</p>
+						</section><!--//docs-intro-->
+				    </header>
+				     <section class="docs-section" id="item-2-1">
+						<h2 class="section-heading">Manual Installation</h2>
+						<p>You can download the plugin files from the <u>download</u> button above or ask your customer success manager for an updated version. Follow the steps to manually install the plugin :</p>
+						<ol>
+							<li>Process begins with downloading the plugin .zip file into your machine. Then open android Studio and navigate to plugins through any of these steps.
+								<p><code>Android Studio > Configure > Plugin.</code> <a href="assets/images/J/IMG.png" data-title="Plugin" data-toggle="lightbox">&nbsp; View</a> </p>
+								<p><code>Android Studio > Open Project > Tools(Menubar) > SDK Manager > Plugin.</code> <a href="assets/images/J/IMG2.png" data-title="Plugin" data-toggle="lightbox">&nbsp; View</a> </p>
+								<p><code>Android Studio > Open Project > Search Icon > Plugin.</code> <a href="assets/images/J/IMG3.png" data-title="Plugin" data-toggle="lightbox">&nbsp; View</a> </p>
+							</li>
+							<li>Click on the settings icon and select install from disk option.
+								<p><br><img class="figure-img img-fluid shadow rounded" src="assets/images/J/IMG4.png" alt style="width: 400px;"></p>
+							</li>
+							<li>Browse to the location where you saved the .zip file and select it.This should show the Clevertap Assistant Plugin Enabled, click Okay and apply the changes to activate the plugin.
+								<p><br><img class="figure-img img-fluid shadow rounded" src="assets/images/J/IMG5.png" alt style="width: 400px;"></p>
+							</li>
+						</ol>
+					</section><!--//section-->
+					
+					<!-- <section class="docs-section" id="item-2-2">
+						<h2 class="section-heading">Android Marketplace</h2>
+						<p>This option provides a single click download and install option into your android studio and you can begin use instantly.</p>
+					</section>//section -->
+					
+					<div class="callout-block callout-block-info">
+                            
+						<div class="content">
+							<h4 class="callout-title">
+								<span class="callout-icon-holder mr-1">
+									<i class="fas fa-info-circle"></i>
+								</span><!--//icon-holder-->
+								Note
+							</h4>
+							<p>Sometimes the Android Studio IDE might require a restart for the plugin changes to apply.</p>
+						</div><!--//content-->
+					</div><!--//callout-block-->
+			    </article><!--//docs-article-->
+			    
+			    
+			    <article class="docs-article" id="section-3">
+				    <header class="docs-header">
+					    <h1 class="docs-heading">Basic Integration</h1>
+					    <section class="docs-intro">
+						    <p>This section helps you to integrate the CleverTap SDK to track your users, events etc and see this information within the Clevertap dashboard. To track, segment, and engage your users complete basic integration as follows :</p>
+							<p><code>File > New > Clevertap Assistant > Basic Integration.</code> <a href="assets/images/J/IMG6.png" data-title="Basic Integration" data-toggle="lightbox">&nbsp; View</a> </p>
+							<p><br><img class="figure-img img-fluid shadow rounded" src="assets/images/J/IMG7.png" alt style="width: 400px;"></p>
+						</section><!--//docs-intro-->
+				    </header>
+				     <section class="docs-section" id="item-3-1">
+						<h2 class="section-heading">Details and values.</h2>
+						<p><ul>
+							<li><p><big><span class="badge badge-light">Account ID / Token : </span></big> To associate your Android app with your CleverTap account, you need to add your CleverTap credentials such as the account id and account token.These values are available on the Settings page at the bottom left-hand corner of your dashboard.</p><p><code>Dashboard > Settings > Copy Values</code></p></li>
+							<li><p><big><span class="badge badge-light">Google Ad ID : </span></big> Select Yes to use Google's advertising ID as Clertap ID.</p></li>
+							<div class="callout-block callout-block-info">
+								<div class="content">
+									<h4 class="callout-title">
+										<span class="callout-icon-holder mr-1">
+											<i class="fas fa-info-circle"></i>
+										</span><!--//icon-holder-->
+										Using Google AD ID to uniquely identify users
+									</h4>
+									<p>GDPR mandates that if you are using Google AD ID to uniquely identify users, there should be prominent disclosure in your application that explains this to your end customer. For more information, refer to this <a href="https://clevertap.com/blog/in-preparation-of-gdpr-compliance/" target="_blank">GDPR article.</a></p>
+									<p>Note: If you still want to use Google AD ID to generate a user's identity, so that you can identify users across re-installs, add the meta tag that forces the use of the Google AD ID to generate an identity in CleverTap.</p>
+								</div><!--//content-->
+							</div><!--//callout-block-->
+							<li><p><big><span class="badge badge-light">Clevertap region : </span></big>By default, we process and store customer data in our EU data center. For CleverTap customers based in India or any other region who need in-region storage and processing for regulatory compliance, we offer U.S, India, Singapore & South Korea as a data center.</p></li>
+							<li><p><big><span class="badge badge-light">IN-App Exclude : </span></big>In-app notifications are pop-ups that you can show to your users while they are in your application.Mention the activities on which you do not want in-app notifications to show.</p></li>
+							<li><p><big><span class="badge badge-light">Application Class : </span></big>The application class ensure that system events such as app launch, install , uninstall etc are captured automatically by the clevertap SDK.</p></li>
+						</ul></p>
+					</section><!--//section-->
+					
+					<section class="docs-section" id="item-3-2">
+						<h2 class="section-heading">Affected Files.</h2>
+						<ul class="nav nav-tabs" id="myTab" role="tablist">
+							<li class="nav-item">
+							  <a class="nav-link active" id="manifest-tab" data-toggle="tab" href="#manifest" role="tab" aria-controls="manifest" aria-selected="true">AndroidManifest.xml</a>
+							</li>
+							<li class="nav-item">
+							  <a class="nav-link" id="build-tab" data-toggle="tab" href="#build" role="tab" aria-controls="build" aria-selected="false">Build.gradle(App)</a>
+							</li>
+							<li class="nav-item dropdown">
+							  <a class="nav-link dropdown-toggle" id="drop-lang" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Lauching Activity</a>
+							  <div class="dropdown-menu" aria-labelledby="drop-lang">
+								  <a class="dropdown-item" data-toggle="pill" href="#java1">Java</a>
+								  <a class="dropdown-item" data-toggle="pill" href="#kotlin1">Kotlin</a>
+							  </div>
+							</li>
+						</ul>
+						  <div class="tab-content" id="myTabContent">
+							<div class="tab-pane fade show active" id="manifest" role="tabpanel" aria-labelledby="manifest-tab">
+								<code>
+									&lt;!-- Required to allow the app to send events and user profile information --&gt;<br>
+									&lt;uses-permission android:name="android.permission.INTERNET"/><br>
+									&lt;!-- Recommended so that CleverTap knows when to attempt a network call --&gt;<br>
+									&lt;uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/&gt;<br>
+
+									&lt;!-- CleverTap Credentials --&gt;<br>
+
+									&lt;meta-data<br>
+										android:name="CLEVERTAP_ACCOUNT_ID"<br>
+										android:value="Your CleverTap Account ID"/&gt;<br>
+									&lt;meta-data<br>
+										android:name="CLEVERTAP_TOKEN"<br>
+										android:value="Your CleverTap Account Token"/&gt;<br>
+									&lt;meta-data<br>
+										android:name="CLEVERTAP_USE_GOOGLE_AD_ID"<br>
+										android:value="1"/&gt; <br>
+								</code>
+							</div>
+							<div class="tab-pane fade" id="build" role="tabpanel">
+							<code><br>	implementation 'com.clevertap.android:clevertap-android-sdk:4.0.2'</code>
+							</div>
+							<div class="tab-pane fade" id="java1" role="tabpanel" >
+								<code>
+									<br>//Java
+									<br>CleverTapAPI clevertapDefaultInstance = CleverTapAPI.getDefaultInstance(getApplicationContext());<br>
+								</code>
+							</div>
+							<div class="tab-pane fade" id="kotlin1" role="tabpanel" >
+								<code>
+									<br>//Kotlin<br>
+										var cleverTapDefaultInstance: CleverTapAPI? = null<br>
+										cleverTapDefaultInstance = CleverTapAPI.getDefaultInstance(applicationContext)<br>
+								</code>
+							</div>
+						  </div>
+					</section><!--//section-->
+			    </article><!--//docs-article-->
+
+				<article class="docs-article" id="section-4">
+				    <header class="docs-header">
+					    <h1 class="docs-heading">Events and User Properties</h1>
+					    <section class="docs-intro">
+						    <p>The Clevertap Assistant Plugin also provides some utilities to fast pace the integration of clevertap into you project by providing one click code snippet insertions.</p>
+						</section><!--//docs-intro-->
+				    </header>
+				    <p>To access these utilities point your cursor anywhere in the file where you want to insert the code snippet and right click to view the options available.</p>
+					<p><br><img class="figure-img img-fluid shadow rounded" src="assets/images/J/IMG24.png" alt style="width: 800px;"></p>
+					<p><h4>Initialize Clevertap</h4></p>
+					<p>Adds a clevertap object initialization code snippet at cursor point. <br> Snippet : </p>
+					<ul class="nav nav-tabs" id="myTab" role="tablist">
+						<li class="nav-item">
+							<a class="nav-link active" id="Init-java-tab" data-toggle="tab" href="#Init-java" role="tab" aria-controls="Init-java" aria-selected="true">Java</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" id="Init-kotlin-tab" data-toggle="tab" href="#Init-kotlin" role="tab" aria-controls="Init-kotlin" aria-selected="true">Kotlin</a>
+						</li>
+					</ul>
+					<div class="tab-content" id="myTabContent">
+						<div class="tab-pane fade show active" id="Init-java" role="tabpanel" aria-labelledby="Init-java-tab">
+							<code><br>CleverTapAPI clevertapDefaultInstance = CleverTapAPI.getDefaultInstance(getApplicationContext());<br><br></code>
+						</div>
+						<div class="tab-pane fade" id="Init-kotlin" role="tabpanel" aria-labelledby="Init-kotlin-tab">
+							<code><br>
+								var clevertapDefaultInstance: CleverTapAPI? = null<br>
+								clevertapDefaultInstance = CleverTapAPI.getDefaultInstance(applicationContext)//added by CleverTap Assistant<br><br>
+							</code>
+						</div>
+					</div>
+					<section class="docs-section" id="item-4-1">
+						<p><h4>Add User Properties</h4></p>
+						<p>After you integrate our SDK, CleverTap creates a user profile for each person who launches your app or visits your website. A CleverTap user profile has a set of default fields, such as email, phone number, and language. You can also extend the default user profile by adding custom fields that are specific to your business. <br>
+							you can use the <b>"onUserLogin"</b> method to assign unique profile to track each user account separately. When initially installed on a device, your app is assigned an anonymous profile. You can use the <b>"profile.push"</b> method to add more user properties to the identified profiles.  </p>
+						<p>You can add the <b>"onUserLogin"</b> code snippet in your login page files and the <b>"profile.push"</b> code snippet onto your update profile pages. <br><br>Code Snippet for <b>onUserLogin : </b></p>
+						<ul class="nav nav-tabs" id="myTab" role="tablist">
+							<li class="nav-item">
+								<a class="nav-link active" id="onUser-java-tab" data-toggle="tab" href="#onUser-java" role="tab" aria-controls="onUser-java" aria-selected="true">Java</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" id="onUser-kotlin-tab" data-toggle="tab" href="#onUser-kotlin" role="tab" aria-controls="onUser-kotlin" aria-selected="true">Kotlin</a>
+							</li>
+						</ul>
+						<div class="tab-content" id="myTabContent">
+							<div class="tab-pane fade show active" id="onUser-java" role="tabpanel" aria-labelledby="onUser-java-tab">
+								<code><br>
+									HashMap<String, Object> OnUserLoginProperties = new HashMap<String, Object>(); <br>
+									OnUserLoginProperties.put("USer Property_name ", "value"); <br>
+									clevertapDefaultInstance.onUserLogin(OnUserLoginProperties);//added by CleverTap Assistant <br><br>
+								</code>
+							</div>
+							<div class="tab-pane fade" id="onUser-kotlin" role="tabpanel" aria-labelledby="onUser-kotlin-tab">
+								<code><br>
+									val OnUserLoginProperties =HashMap<String, Any>() <br>
+									OnUserLoginProperties["USer Property_name "]="value" <br>
+									clevertapDefaultInstance?.onUserLogin(OnUserLoginProperties) //added by CleverTap Assistant<br><br>
+								</code>
+							</div>
+						</div>
+						<p><br>Code snippet for <b>Profile push : </b></p>
+						<ul class="nav nav-tabs" id="myTab" role="tablist">
+							<li class="nav-item">
+								<a class="nav-link active" id="pPush-java-tab" data-toggle="tab" href="#pPush-java" role="tab" aria-controls="pPush-java" aria-selected="true">Java</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" id="pPush-kotlin-tab" data-toggle="tab" href="#pPush-kotlin" role="tab" aria-controls="pPush-kotlin" aria-selected="true">Kotlin</a>
+							</li>
+						</ul>
+						<div class="tab-content" id="myTabContent">
+							<div class="tab-pane fade show active" id="pPush-java" role="tabpanel" aria-labelledby="pPush-java-tab">
+								<code><br>
+									HashMap<String, Object> ProfilePush = new HashMap<String, Object>();<br>
+									ProfilePush.put("USer Property_name ", "value");<br>
+									clevertapDefaultInstance.pushProfile(ProfilePush);//added by CleverTap Assistant <br><br>
+								</code>
+							</div>
+							<div class="tab-pane fade" id="pPush-kotlin" role="tabpanel" aria-labelledby="pPush-kotlin-tab">
+								<code><br>
+									val ProfilePush =HashMap<String, Any>() <br>
+									ProfilePush["USer Property_name"]= "value" <br>
+									clevertapDefaultInstance?.pushProfile(ProfilePush)//added by CleverTap Assistant<br><br>
+								</code>
+							</div>
+						</div>
+					</section>
+					<section class="docs-section" id="item-4-2">
+						<p><h4>Add Custom Events</h4></p>
+						<p>Once you integrate the CleverTap SDK, we automatically start tracking events, such as App Launch and Notification Viewed. In addition to the default events tracked by CleverTap, you can also track custom events. <br>To send custom events to CleverTap using our Android SDK, you have to call the pushEvent method with the name of the custom event you want to track.</p>
+						<p>You can add an individual event or event with various properties at a selected cursor point. <br>Code Snippet : </p>
+						<ul class="nav nav-tabs" id="myTab" role="tablist">
+							<li class="nav-item">
+								<a class="nav-link active" id="Event-java-tab" data-toggle="tab" href="#Event-java" role="tab" aria-controls="Event-java" aria-selected="true">Java</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" id="Event-kotlin-tab" data-toggle="tab" href="#Event-kotlin" role="tab" aria-controls="Event-kotlin" aria-selected="true">Kotlin</a>
+							</li>
+						</ul>
+						<div class="tab-content" id="myTabContent">
+							<div class="tab-pane fade show active" id="Event-java" role="tabpanel" aria-labelledby="Event-java-tab">
+								<code><br>
+									HashMap<String, Object> eventProperties = new HashMap<String, Object>();<br>
+									eventProperties.put("Event Property_name ", "value");<br>
+									clevertapDefaultInstance.pushEvent("event_name", eventProperties);//added by CleverTap Assistant <br><br>
+								</code>
+							</div>
+							<div class="tab-pane fade" id="Event-kotlin" role="tabpanel" aria-labelledby="Event-kotlin-tab">
+								<code><br>
+									val eventProperties =HashMap<String, Any>() <br>
+									eventProperties["USer Property_name "]="value" <br>
+									clevertapDefaultInstance?.pushEvent("event_name", eventProperties) //added by CleverTap Assistant<br><br>
+								</code>
+							</div>
+						</div>
+					</section>
+			    </article><!--//docs-article-->
+			    
+			    <article class="docs-article" id="section-5">
+				    <header class="docs-header">
+					    <h1 class="docs-heading">Push Notifications</h1>
+					    <section class="docs-intro">
+						    <p>Handle all different kinds push notification from various developer services like Firebase, Huawei and Xiaomi Push through Clevertap. </p>
+						</section><!--//docs-intro-->
+				    </header>
+				     <section class="docs-section" id="item-5-1">
+						<h2 class="section-heading">Push Integration</h2>
+						<p>The easiest way to send push notifications is to use the default implementation by CleverTap, however, if you have your own implementation or use another push provider, refer to <a class="scrollto" href="#section-5">Custom Android Push Notifications Handling.</a></p>
+						<p><code> File > New > Clevertap Assistant > Push Notification. </code> &nbsp; <a href="assets/images/J/IMG12.png" data-title="Push Integration" data-toggle="lightbox"> View</a></p>
+						<p><h4>Scenario 1 : 'Yes' is Selected </h4>
+							<br><img class="figure-img img-fluid shadow rounded" src="assets/images/J/IMG28.png" alt style="width: 600px;">
+						</p>
+						<p><h4>Scenario 2 : 'No' is Selected </h4>
+							<br><img class="figure-img img-fluid shadow rounded" src="assets/images/J/IMG13.png" alt style="width: 600px;"></p>
+						<section id="item-5-1-1">
+							<h3>Details and Values</h3>
+							<ol>
+								<li><p><big><span class="badge badge-light">Push Notification implementation : </span></big> Select yes if you have already implemented push notification using firebase cloud messaging, if not then select "No" to configure using the plugin.</p></li>
+								<li><p><big><span class="badge badge-light">FCM Service Name : </span></big>Name of the Firebase Service class to be created to handle incoming push notifications.</p></li>
+								<li><p><big><span class="badge badge-light">Channel Id : </span></big>All push notification must be passed through a notification channel starting with Android O and later versions. </p></li>
+								<li><p><big><span class="badge badge-light">FCM Sender Id : </span></big>Refer note below.</p></li>
+								<li><p><big><span class="badge badge-light">Dependency Version : </span></big> Firebase messaging dependency version to be used in the projrct </p></li>
+								<li><p><big><span class="badge badge-light">Google Service File : </span></big>Refer note below.</p></li>
+							</ol>
+						</section>
+						<section id="item-5-1-2">
+							<h3>Affected Files</h3><br>
+							<h4>For Scenario 1 :</h4>
+							<ul class="nav nav-tabs" id="myTab" role="tablist">
+								<li class="nav-item">
+									<a class="nav-link active" id="push-manifest-tab1" data-toggle="tab" href="#push-manifest1" role="tab" aria-controls="push-manifest1" aria-selected="true">AndroidManifest.xml</a>
+								</li>
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle" id="push-drop-lang1" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Lauching Activity</a>
+									<div class="dropdown-menu" aria-labelledby="push-drop-lang1">
+										<a class="dropdown-item" data-toggle="pill" href="#push-java1">Java</a>
+										<a class="dropdown-item" data-toggle="pill" href="#push-kotlin1">Kotlin</a>
+									</div>
+								</li>
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle" id="push-drop-lang2" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">FCM_Service Class File</a>
+									<div class="dropdown-menu" aria-labelledby="push-drop-lang2">
+										<a class="dropdown-item" data-toggle="pill" href="#push-java2">Java</a>
+										<a class="dropdown-item" data-toggle="pill" href="#push-kotlin2">Kotlin</a>
+									</div>
+								</li>
+							</ul>
+							<div class="tab-content" id="myTabContent">
+								<div class="tab-pane fade show active" id="push-manifest1" role="tabpanel" aria-labelledby="push-manifest-tab1">
+									<code><br>
+										&lt;receiver<br>&nbsp;
+										android:name="com.clevertap.android.sdk.pushnotification.CTPushNotificationReceiver"<br>&nbsp;
+										android:exported="false"<br>&nbsp;
+										android:enabled="true"&gt;<br>
+									&lt;/receiver&gt;<br><br></code>
+								</div>
+								<div class="tab-pane fade" id="push-java1" role="tabpanel">
+									<code><br>
+										import android.app.NotificationManager;<br>
+										CleverTapAPI.createNotificationChannel(getApplicationContext(),"YourChannelId","Your Channel Name","Your Channel Description",NotificationManager.IMPORTANCE_MAX,true);<br><br>
+									</code>
+								</div>
+								<div class="tab-pane fade" id="push-kotlin1" role="tabpanel">
+									<code><br>
+										import android.app.NotificationManager<br>
+										CleverTapAPI.createNotificationChannel(getApplicationContext(),"YourChannelId","Your Channel Name","Your Channel Description",NotificationManager.IMPORTANCE_MAX,true);<br><br>
+									</code>
+								</div>
+								<div class="tab-pane fade" id="push-java2" role="tabpanel">
+									<code>
+										public class MyFcmMessageListenerService extends FirebaseMessagingService {<br><br>&nbsp;
+
+											@Override<br>&nbsp;
+											public void onMessageReceived(RemoteMessage message){<br>&nbsp;&nbsp;
+												try {<br>&nbsp;&nbsp;&nbsp;
+													if (message.getData().size() > 0) {<br>&nbsp;&nbsp;&nbsp;&nbsp;
+														Bundle extras = new Bundle();<br>&nbsp;&nbsp;&nbsp;&nbsp;
+														for (Map.Entry&lt;String, String&gt; entry : message.getData().entrySet()) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+															extras.putString(entry.getKey(), entry.getValue());<br>&nbsp;&nbsp;&nbsp;&nbsp;
+														}<br><br>&nbsp;&nbsp;&nbsp;&nbsp;
+										
+														NotificationInfo info = CleverTapAPI.getNotificationInfo(extras);<br><br>&nbsp;&nbsp;&nbsp;&nbsp;
+										
+														if (info.fromCleverTap) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+															CleverTapAPI.createNotification(getApplicationContext(), extras);<br>&nbsp;&nbsp;&nbsp;&nbsp;
+														} else {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+															// not from CleverTap handle yourself or pass to another provider<br>&nbsp;&nbsp;&nbsp;&nbsp;
+														}<br>&nbsp;&nbsp;&nbsp;
+													}<br>&nbsp;&nbsp;
+												} catch (Throwable t) {<br>&nbsp;&nbsp;&nbsp;
+												   Log.d("MYFCMLIST", "Error parsing FCM message", t);<br>&nbsp;&nbsp;
+												}<br>&nbsp;
+											}<br><br>
+										
+										
+										@Override<br>
+										Public void onNewToken(@NonNull String s)<br>
+										{<br>&nbsp;
+											super.onNewToken(s);<br>&nbsp;
+											cleverTapDefaultInstance=CleverTapAPI.getDefaultInstance(getApplicationContext());<br>&nbsp;
+											cleverTapDefaultInstance.pushFcmRegistrationId(s,true);<br>
+										
+										}<br>
+										
+										}<br><br>
+										
+									</code>
+								</div>
+								<div class="tab-pane fade" id="push-kotlin2" role="tabpanel">
+									<code><br>
+										class MyFcmMessageListenerService : FirebaseMessagingService() {<br><br>&nbsp;
+
+											override fun onMessageReceived(message: RemoteMessage) {<br>&nbsp;&nbsp;
+											
+												message.data.apply {<br>&nbsp;&nbsp;&nbsp;
+													try {<br>&nbsp;&nbsp;&nbsp;&nbsp;
+														if (size > 0) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+															val extras = Bundle()<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+															for ((key, value) in this) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+																extras.putString(key, value)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+															}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+															val info = CleverTapAPI.getNotificationInfo(extras)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+															if (info.fromCleverTap) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+																CleverTapAPI.createNotification(applicationContext, extras)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+															} else {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+																// not from CleverTap handle yourself or pass to another provider<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+															}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+														}<br>&nbsp;&nbsp;&nbsp;&nbsp;
+													} catch (t: Throwable) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+														Log.d("MYFCMLIST", "Error parsing FCM message", t)<br>&nbsp;&nbsp;&nbsp;&nbsp;
+													}<br>&nbsp;&nbsp;&nbsp;
+												}<br>&nbsp;&nbsp;&nbsp;
+												}<br>&nbsp;&nbsp;
+											}<br>&nbsp;
+									</code>
+								</div>
+							</div><br>
+							<h4>For Scenario 2 :</h4>
+							<ul class="nav nav-tabs" id="myTab" role="tablist">
+								<li class="nav-item">
+								  <a class="nav-link active" id="push-manifest-tab" data-toggle="tab" href="#push-manifest" role="tab" aria-controls="push-manifest" aria-selected="true">AndroidManifest.xml</a>
+								</li>
+								<li class="nav-item">
+								  <a class="nav-link" id="push-build-tab" data-toggle="tab" href="#push-build" role="tab" aria-controls="push-build" aria-selected="false">Build.gradle(App)</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" id="push-build2-tab" data-toggle="tab" href="#push-build2" role="tab" aria-controls="push-build2" aria-selected="false">Build.gradle(Module)</a>
+								</li>
+								<li class="nav-item dropdown">
+								  <a class="nav-link dropdown-toggle" id="push-drop-lang" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Lauching Activity</a>
+								  <div class="dropdown-menu" aria-labelledby="push-drop-lang">
+									  <a class="dropdown-item" data-toggle="pill" href="#push-java">Java</a>
+									  <a class="dropdown-item" data-toggle="pill" href="#push-kotlin">Kotlin</a>
+								  </div>
+								</li>
+							</ul>
+							<div class="tab-content" id="myTabContent">
+								<div class="tab-pane fade show active" id="push-manifest" role="tabpanel" aria-labelledby="push-manifest-tab">
+									<code>
+										&lt;receiver<br>&nbsp;
+											android:name="com.clevertap.android.sdk.pushnotification.CTPushNotificationReceiver"<br>&nbsp;
+											android:exported="false"<br>&nbsp;
+											android:enabled="true"&gt;<br>
+										&lt;/receiver&gt;<br><br>
+
+										&lt;service<br>
+										android:name=".fcm.FcmMessageListenerService"&gt;<br>&nbsp;
+											&lt;intent-filter&gt;<br>&nbsp;&nbsp;
+												&lt;action android:name="com.google.firebase.MESSAGING_EVENT"/&gt;<br>&nbsp;
+											&lt;/intent-filter&gt;<br>
+										&lt;/service&gt;<br><br>
+
+										&lt;meta-data<br>&nbsp;
+											android:name="FCM_SENDER_ID"<br>&nbsp;
+											android:value="id:(insert your value)"/&gt;<br><br>
+
+									</code>
+								</div>
+								<div class="tab-pane fade" id="push-build" role="tabpanel" aria-labelledby="push-build-tab">
+									<code>
+										dependencies {<br>&nbsp;
+											implementation 'com.google.firebase:firebase-messaging:20.2.4'<br>&nbsp;
+												implementation 'androidx.core:core:1.3.0'<br>&nbsp;&nbsp;
+										  //Mandatory for CleverTap Android SDK v3.6.4 and above add the following -<br>&nbsp;&nbsp;
+												implementation 'com.android.installreferrer:installreferrer:2.1'<br>&nbsp;
+										}<br>
+										// at the end of the build.gradle file<br>
+										apply plugin: 'com.google.gms.google-services' <br><br>
+										
+									</code>
+								</div>
+								<div class="tab-pane fade" id="push-build2" role="tabpanel" aria-labelledby="push-build2-tab">
+									<code>
+										<br>Classpath ‘com.google.gms:google-services:4.3.3’<br><br>
+									</code>
+								</div>
+								<div class="tab-pane fade" id="push-java" role="tabpanel">
+									<code>
+										<br>CleverTapAPI.createNotificationChannel(getApplicationContext(),"YourChannelId","Your Channel Name","Your Channel Description",NotificationManager.IMPORTANCE_MAX,true);<br><br>
+									</code>
+								</div>
+								<div class="tab-pane fade" id="push-kotlin" role="tabpanel">
+									<code>
+										<br>CleverTapAPI.createNotificationChannel(getApplicationContext(),"YourChannelId","Your Channel Name","Your Channel Description",NotificationManager.IMPORTANCE_MAX,true);<br><br>
+									</code>
+								</div>	
+							</div>
+						</section>
+						<section id="item-5-1-3">
+							<h3>Dashboard Settings</h3>
+							<P>You need to enable Push Notifications on the dashboard and update credentials from your firebase project. Follow these steps to enable push notifications:</P>
+							<ol>
+								<li><code>Navigate to Settings > Channel > Mobile Push.</code></li>
+								<li><code>Enter the credentials.</code></li>
+							</ol>
+							<p><br><img class="figure-img img-fluid shadow rounded" src="assets/images/J/IMG14.png" alt style="width: 800px;"></p>
+							<div class="callout-block callout-block-info">
+								<div class="content">
+									<h4 class="callout-title">
+										<span class="callout-icon-holder mr-1">
+											<i class="fas fa-info-circle"></i>
+										</span><!--//icon-holder-->
+										Note :
+									</h4>
+									<p>Firebase Sender ID and Server API key both are a part of your project on firebase. You can obtain them from <code>Project Console > Project Settings > Cloud Messaging.</code> <a href="assets/images/J/IMG15.png" data-title="Firebase." data-toggle="lightbox">&nbsp; View</a> </p>
+									<p>The GoogleServices.JSON file is also a part of your firebase project and it contains certain credentials and configuration settings which is needed to verify while connecting to the GoogleApiClient. You can obtain it from <code>Project Console > Project Settings > General.</code> <a href="assets/images/J/IMG16.png" data-title="Firebase." data-toggle="lightbox">&nbsp; View</a> </p>
+								</div><!--//content-->
+							</div><!--//callout-block-->
+						</section>
+					</section><!--//section-->
+					<section class="docs-section" id="item-5-2">
+						<h2 class="section-heading">Xiaomi Push Integration</h2>
+						<p>CleverTap can send push notifications powered by Xiaomi Cloud Push, an Android push notification delivery service for Chinese devices. For a greater chance of delivery success, we send a push notification through both Xiaomi Cloud Push and Firebase Cloud Messaging (FCM) push services.The first step to access the Xiaomi cloud push is registered as a Xiaomi developer on the Xiaomi Website.Then you can configure your project using the clevertap plugin for xiaomi push by these steps : </p>
+						<p><code> File > New > Clevertap Assistant > Xiaomi Push. </code> &nbsp; <a href="assets/images/J/IMG17.png" data-title="Xiaomi " data-toggle="lightbox"> View</a></p>
+						<p><br><img class="figure-img img-fluid shadow rounded" src="assets/images/J/IMG18.png" alt style="width: 400px;"></p>
+						<section id="item-5-2-1">
+							<h3>Deatils and Values</h3>
+							<ol>
+								<li><p><big><span class="badge badge-light">Xiaomi App ID : </span></big>Unique Id for a project/ client's identity available on the xiaomi developer console. </p></li>
+								<li><p><big><span class="badge badge-light">Xiaomi App Key : </span></big>Also a part of client’s identity available on the xiaomi developer console. </p></li>
+							</ol>
+						</section>
+						<section id="item-5-2-2">
+							<h3>Affected Files</h3>
+							<ul class="nav nav-tabs" id="myTab" role="tablist">
+								<li class="nav-item">
+								  <a class="nav-link active" id="Xiaomi-manifest-tab" data-toggle="tab" href="#Xiaomi-manifest" role="tab" aria-controls="Xiaomi-manifest" aria-selected="true">AndroidManifest.xml</a>
+								</li>
+								<li class="nav-item">
+								  <a class="nav-link" id="Xiaomi-string-tab" data-toggle="tab" href="#Xiaomi-string" role="tab" aria-controls="Xiaomi-string" aria-selected="false">Strings.xml</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" id="Xiaomi-build-tab" data-toggle="tab" href="#Xiaomi-build" role="tab" aria-controls="Xiaomi-build" aria-selected="false">Build.gradle(App)</a>
+								</li>
+							</ul>
+							<div class="tab-content" id="myTabContent">
+								<div class="tab-pane fade show active" id="Xiaomi-manifest" role="tabpanel" aria-labelledby="Xiaomi-manifest-tab">
+									<code><br>
+										&lt;meta-data<br>&nbsp;
+											android:name="CLEVERTAP_XIAOMI_APP_KEY"<br>&nbsp;
+											android:value="@string/xiaomi_app_key" /&gt;<br><br>
+
+										&lt;meta-data<br>&nbsp;
+											android:name="CLEVERTAP_XIAOMI_APP_ID"<br>&nbsp;
+											android:value="@string/xiaomi_app_id" /&gt;<br><br>
+									</code>
+								</div>
+								<div class="tab-pane fade" id="Xiaomi-string" role="tabpanel" aria-labelledby="Xiaomi-string-tab">
+									<code><br>
+										&lt;string name="xiaomi_app_key"&gt;Your Xiaomi App Key&lt;/string&gt;<br>
+										&lt;string name="xiaomi_app_id"&gt;Your Xiaomi App ID&lt;/string&gt;<br><br>
+									</code>
+								</div>
+								<div class="tab-pane fade" id="Xiaomi-build" role="tabpanel" aria-labelledby="Xiaomi-build-tab">
+									<code>
+										<br>implementation 'com.clevertap.android:clevertap-xiaomi-sdk:1.0.2'<br><br>
+									</code>
+								</div>
+							</div>
+						</section>
+						<section id="item-5-2-3">
+							<h3>Dashboard Setting</h3>
+							<P>You need to enable Xiaomi Push Notifications on the dashboard and update credentials from your Xiaomi Developer Console Project. Follow these steps to enable push notifications:</P>
+							<ol>
+								<li><code>Navigate to Settings > Channel > Mobile Push.</code></li>
+								<li><code>Enter the credentials.</code></li>
+							</ol>
+							<p><br><img class="figure-img img-fluid shadow rounded" src="assets/images/J/IMG19.png" alt style="width: 800px;"></p>
+							<div class="callout-block callout-block-info">
+								<div class="content">
+									<h4 class="callout-title">
+										<span class="callout-icon-holder mr-1">
+											<i class="fas fa-info-circle"></i>
+										</span><!--//icon-holder-->
+										Note :
+									</h4>
+									<p>Once the App is created on your console, click on the App name to get your Package Name/App ID/ App Key/ App Secret. Among these, the AppID and AppKey are the client’s identity, used when the client SDK initializes; the AppSecret is authenticated for sending a message at the server-side.</code> <a href="assets/images/J/IMG20.png" data-title="Xiaomi." data-toggle="lightbox">&nbsp; View</a> </p>
+								</div><!--//content-->
+							</div><!--//callout-block-->
+						</section>
+					</section><!--//section-->
+					
+					<section class="docs-section" id="item-5-3">
+						<h2 class="section-heading">Huawei Push Integration</h2>
+						<p>Huawei uses its own push service to deliver notifications to their devices.CleverTap can send push notifications powered by Huawei Cloud Push, an Android push notification delivery service. For a greater chance of delivery success, we send a push notification through both Huawei Cloud Push and Firebase Cloud Messaging push services. If a message is delivered through one of these push services, the notification from the other cloud service is suppressed. This ensures that the user will only receive the push notification once.To configure your project for Huawei Push using the clevertap plugin follow these steps :</p>
+						<p><code> File > New > Clevertap Assistant > Huawei Push. </code> &nbsp; <a href="assets/images/J/IMG21.png" data-title="Huawei." data-toggle="lightbox">View</a></p>
+						<p><br><img class="figure-img img-fluid shadow rounded" src="assets/images/J/IMG22.png" alt style="width: 400px;"></p>
+						<section id="item-5-3-1">
+							<h3>Deatils and Values</h3>
+							<ol>
+								<li><p>The first step to access the Huawei cloud push is registered as a Huawei developer on the <a href="https://id5.cloud.huawei.com/CAS/portal/loginAuth.html" target="_blank"> Huawei Website.</a></p></li>
+								<li><p>Once you login to the console, enable the Push Kit. Enable other settings as mentioned by Huawei.</p></li>
+								<li><p><big><span class="badge badge-light">Agconnect-Service File : </span></big> The agconnect-services. json file provides configuration information required by various services in your AppGalleryConnect project. Download the agconnect-services.json file from the Huawei Console.</p></li>
+							</ol>
+						</section>
+						<section id="item-5-3-2">
+							<h3>Affected Files</h3>
+							<ul class="nav nav-tabs" id="myTab" role="tablist">
+								<li class="nav-item">
+								  <a class="nav-link active" id="Huawei-build-tab" data-toggle="tab" href="#Huawei-build" role="tab" aria-controls="Huawei-build" aria-selected="true">Build.gradle(App)</a>
+								</li>
+								<li class="nav-item">
+								  <a class="nav-link" id="Huawei-build2-tab" data-toggle="tab" href="#Huawei-build" role="tab" aria-controls="Huawei-build2" aria-selected="false">Build.gradle(Project)</a>
+								</li>
+							</ul>
+							<div class="tab-content" id="myTabContent">
+								<div class="tab-pane fade show active" id="Huawei-build" role="tabpanel" aria-labelledby="Huawei-build-tab">
+									<code> <br>
+										implementation 'com.clevertap.android:clevertap-hms-sdk:1.0.1'<br>
+										implementation 'com.huawei.hms:push:5.0.0.300'//Add the dependency<br><br>
+										apply plugin: 'com.huawei.agconnect'//Add This at the bottom of the file<br><br>
+									</code>
+								</div>
+								<div class="tab-pane fade" id="Huawei-build2" role="tabpanel" aria-labelledby="Huawei-build2-tab">
+									<code><br>
+										buildscript {<br>&nbsp;
+											repositories {<br>&nbsp;&nbsp;
+												// HUAWEI ADD THIS<br>&nbsp;&nbsp;
+												maven {url 'http://developer.huawei.com/repo/'}<br>&nbsp;
+												
+											}<br>&nbsp;
+											dependencies {<br>&nbsp;&nbsp;
+												classpath "com.android.tools.build:gradle:4.0.1"<br><br>&nbsp;&nbsp;
+												
+												// HUAWEI ADD THIS<br>&nbsp;&nbsp;
+												classpath 'com.huawei.agconnect:agcp:1.3.1.300'<br>&nbsp;
+											}<br>
+										}<br><br>
+										
+										allprojects {<br>&nbsp;
+											repositories {<br>&nbsp;&nbsp;
+												// HUAWEI ADD THIS<br>&nbsp;&nbsp;
+												maven {url 'http://developer.huawei.com/repo/'}<br>&nbsp;
+												
+											}<br>
+										}<br><br>
+									</code>
+								</div>
+							</div>
+						</section>
+						<section id="item-5-3-3">
+							<h3>Dashboard setting</h3>
+							<P>You need to enable Huawei Push Notifications on the dashboard and update credentials from your Huawei Developer Console Project. Follow these steps to enable push notifications:</P>
+							<ol>
+								<li><code>Navigate to Settings > Channel > Mobile Push > Huawei Credentials.</code></li>
+								<li><code>Enter the credentials.</code></li>
+							</ol>
+							<p><br><img class="figure-img img-fluid shadow rounded" src="assets/images/J/IMG23.png" alt style="width: 800px;"></p>
+							<div class="callout-block callout-block-info">
+								<div class="content">
+									<h4 class="callout-title">
+										<span class="callout-icon-holder mr-1">
+											<i class="fas fa-info-circle"></i>
+										</span><!--//icon-holder-->
+										Note :
+									</h4>
+									<p><ul>
+										<li>Once the App is created on your console, click on the App name to get your Package Name/App ID/ App Key/ App Secret. Among these, the AppID and AppKey are the client’s identity, used when the client SDK initializes; the AppSecret is authenticated for sending a message at the server-side.</code> <a href="assets/images/J/IMG27.png" data-title="Huawei." data-toggle="lightbox">&nbsp; View</a> </li>
+										<li>To test huawei integration in non huawei phone you would need to download the <a href="https://play.google.com/store/apps/details?id=com.huawei.hwid&hl=en_IN&gl=US" target="_blank">Huawei Mobile Services</a> app on the Google Play</li>
+									</ul></p>
+								</div><!--//content-->
+							</div><!--//callout-block-->
+						</section>
+					</section><!--//section-->
+			    </article><!--//docs-article-->
+			    
+			    <article class="docs-article" id="section-6">
+				    <header class="docs-header">
+					    <h1 class="docs-heading">Push Amplification</h1>
+					    <section class="docs-intro">
+						    <p> Push amplification provides the capability to reach users on devices that suppress notifications via GCM/FCM.To allow your app to use CleverTap's push amplification via background ping service, use the Push Amplification feature from the Clevetap Assistant : </p>
+							<p><code> File > New > Clevertap Assistant > Push Amplification. </code> &nbsp; <a href="assets/images/J/IMG8.png" data-title="Push Amplification" data-toggle="lightbox"> View</a></p>
+							<p><br><img class="figure-img img-fluid shadow rounded" src="assets/images/J/IMG9.png" alt style="width: 400px;"></p>
+						</section><!--//docs-intro-->
+				    </header>
+				     <section class="docs-section" id="item-6-1">
+						<h2 class="section-heading">Affected Files</h2>
+						<p>
+							<h4>Scenario 1 : 'Yes' is Selected.</h4>
+							<ul class="nav nav-tabs" id="myTab" role="tablist">
+								<li class="nav-item dropdown">
+								  <a class="nav-link dropdown-toggle" id="drop-lang2" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Your Application Class</a>
+								  <div class="dropdown-menu" aria-labelledby="drop-lang2">
+									<a class="dropdown-item active" data-toggle="pill" href="#java2">Java</a>
+									<a class="dropdown-item" data-toggle="pill" href="#kotlin2">Kotlin</a>
+								</div>
+								</li>
+								<li class="nav-item dropdown">
+								  <a class="nav-link dropdown-toggle" id="drop-lang3" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">FCM Receiver Class</a>
+								  <div class="dropdown-menu" aria-labelledby="drop-lang3">
+									  <a class="dropdown-item" data-toggle="pill" href="#java3">Java</a>
+									  <a class="dropdown-item" data-toggle="pill" href="#kotlin3">Kotlin</a>
+								  </div>
+								</li>
+							</ul>
+							<div class="tab-content" id="myTabContent">
+								<div class="tab-pane fade show active" id="java2" role="tabpanel">
+								<code><br>
+									public class MyApplication extends Application implements CTPushAmpListener {<br>&nbsp;
+										@Override<br>&nbsp;
+										public void onCreate() {<br>&nbsp;&nbsp;
+											CleverTapAPI cleverTapAPI = CleverTapAPI.getDefaultInstance(getApplicationContext());<br>&nbsp;&nbsp;
+											cleverTapAPI.setCTPushAmpListener(this);<br>&nbsp;&nbsp;
+											super.onCreate();<br><br>&nbsp;
+	
+										}<br>&nbsp;
+										@Override<br>&nbsp;
+										public void onPushAmpPayloadReceived(Bundle bundle) {<br>&nbsp;&nbsp;
+											//write push notification rendering logic here<br>&nbsp;
+										}<br>
+									}<br>
+								</code>
+								</div>
+								<div class="tab-pane fade" id="kotlin2" role="tabpanel" >
+									<code>
+										class MyApplication:Application(), CTPushAmpListener{<br>&nbsp;
+											override fun onCreate(){<br>&nbsp;&nbsp;
+												val cleverTapAPI = CleverTapAPI.getDefaultInstance(getApplicationContext())<br>&nbsp;&nbsp;
+												cleverTapAPI.setCTPushAmpListener(this)<br>&nbsp;&nbsp;
+												super.onCreate()<br>&nbsp;
+											}<br>&nbsp;
+											fun onPushAmpPayloadReceived(bundle:Bundle) {<br>&nbsp;&nbsp;
+												//write push notification rendering logic here<br>&nbsp;
+											  }<br>&nbsp;
+										}<br>&nbsp;
+									</code>
+								</div>
+								<div class="tab-pane fade" id="java3" role="tabpanel" >
+									<code>
+										\\This code snippet is added inside the onMessageReceived() method of FCM Receiver Class<br><br>
+										if (message.getData().size() > 0) {<br>&nbsp;
+											Bundle extras = new Bundle();<br>&nbsp;
+											Iterator var = message.getData().entrySet().iterator();<br><br>&nbsp;
+							
+											while(var.hasNext()) {<br>&nbsp;&nbsp;
+												Map.Entry entry = (Map.Entry)var.next();<br>&nbsp;&nbsp;
+												extras.putString((String)entry.getKey(), (String)entry.getValue());<br>&nbsp;
+											}<br>&nbsp;&nbsp;
+												CleverTapAPI.processPushNotification(getApplicationContext(),extras);<br>&nbsp;
+											}<br>
+										}<br><br>
+							
+									</code>
+								</div>
+								<div class="tab-pane fade" id="kotlin3" role="tabpanel" >
+									<code>
+										\\This code snippet is added inside the onMessageReceived() method of FCM Receiver Class<br><br>
+										if (message.getData().size() > 0)<br>
+										{<br>&nbsp;
+											val extras = Bundle()<br>&nbsp;
+											val `var` = message.getData().entrySet().iterator()<br>&nbsp;
+											while (`var`.hasNext())<br>&nbsp;
+											{<br>&nbsp;&nbsp;
+												val entry = `var`.next() as Map.Entry<br>&nbsp;&nbsp;
+												extras.putString(entry.getKey() as String, entry.getValue() as String)<br>&nbsp;
+											}<br>&nbsp;
+											CleverTapAPI.processPushNotification(getApplicationContext(), extras)<br>
+										}<br>&nbsp;
+									</code>
+								</div>
+							</div>
+						</p>
+						<p>
+							<h4>Scenario 2 : 'No' is Selected.</h4><br>
+							<ul class="nav nav-tabs" id="myTab" role="tablist">
+								<li class="nav-item">
+									<a class="nav-link active" id="manifest1-tab" data-toggle="tab" href="#manifest1" role="tab" aria-controls="manifest1" aria-selected="true">AndroidManifest.xml</a>
+								</li>
+							</ul>
+							<div class="tab-content" id="myTabContent">
+								<div class="tab-pane fade show active" id="manifest1" role="tabpanel" aria-labelledby="manifest1-tab">
+									<code>
+										\\This code snippet is added only when you aren't rendering custom push (i.e. you have selected "NO")<br>
+										&lt;meta-data<br>&nbsp;&nbsp;
+											android:name="CLEVERTAP_BACKGROUND_SYNC"<br>&nbsp;&nbsp;
+											android:value="1"/&gt;<br>
+										
+									</code>
+								</div>
+							</div><br>
+						</p>
+						<div class="callout-block callout-block-info">
+							<div class="content">
+								<h4 class="callout-title">
+									<span class="callout-icon-holder mr-1">
+										<i class="fas fa-info-circle"></i>
+									</span><!--//icon-holder-->
+									Note :
+								</h4>
+								<p><ul>
+									<li>Use Custom rendering only when you are not using createNotification method of ClevertapAPI to render. Only in that case you need to choose 'Yes'.</li>
+									<li>If createNotification method is used to render Clevertap push notification, you need to choose 'No'.</li>
+								</ul></p>
+							</div><!--//content-->
+						</div><!--//callout-block-->
+					</section><!--//section-->
+			    </article><!--//docs-article-->
+			    
+			    
+		        <article class="docs-article" id="section-7">
+				    <header class="docs-header">
+					    <h1 class="docs-heading">Geofencing</h1>
+					    <section class="docs-intro">
+						    <p>CleverTap offers geofencing which is a location-based service that customers can use to engage their audience by sending relevant messages to Android and iOS users who enter or exit a pre-defined location or geographic area.If you haven't already configured your project for Geofence, follow the instructions here : </p>
+							<p><code> File > New > Clevertap Assistant > Geofence. </code> &nbsp; <a href="assets/images/J/IMG10.png" data-title="Geofence" data-toggle="lightbox"> View</a></p>
+							<p><br><img class="figure-img img-fluid shadow rounded" src="assets/images/J/IMG11.png" alt style="width: 400px;"></p>
+						</section><!--//docs-intro-->
+				    </header>
+				     <section class="docs-section" id="item-7-1">
+						<h2 class="section-heading">Details and Values</h2>
+						<p><ul>
+							<li><big><span class="badge badge-light">Log Level : </span></big> Default is DEBUG. <br>
+								<ul>
+									<li>Logger.OFF - Turns off sdk logging</li>
+									<li>Logger.INFO - Prints info level sdk logging</li>
+									<li>Logger.DEBUG - Prints debug level sdk logging</li>
+									<li>Logger.VERBOSE - Prints verbose level sdk logging</li>
+								</ul>
+							</li>
+							<li><big><span class="badge badge-light">Location Accuracy : </span></big> Default is ACCURACY_HIGH. Applicable only for FETCH_CURRENT_LOCATION_PERIODIC <br>
+								<ul>
+									<li>CTGeofenceSettings.ACCURACY_HIGH - provides the most accurate location possible, which is computed using as many inputs as necessary (it enables GPS, Wi-Fi, and cell, and uses a variety of Sensors), and may cause significant battery drain.</li>
+									<li>CTGeofenceSettings.ACCURACY_MEDIUM - provides accurate location while optimising for power. Very rarely uses GPS. Typically uses a combination of Wi-Fi and cell information to compute device location.</li>
+									<li>CTGeofenceSettings.ACCURACY_LOW - largely relies on cell towers and avoids GPS and Wi-Fi inputs, providing coarse (city-level) accuracy with minimal battery drain.</li>
+								</ul>
+							</li>
+							<li><big><span class="badge badge-light">Location Fetch Mode : </span></big> Default is FETCH_LAST_LOCATION_PERIODIC <br>
+								<ul>
+									<li>CTGeofenceSettings.FETCH_LAST_LOCATION_PERIODIC - This value will use Periodic work manager which will fetch last known location from OS periodically(use setInterval() to set the interval). Location fetched using this may be less accurate and might be null in case Location is turned off in the device settings, the device never recorded its location or Google Play services on the device have restarted. This will give better battery optimisation with less location accuracy.</li>
+									<li>CTGeofenceSettings.FETCH_CURRENT_LOCATION_PERIODIC - This value will use Periodic Receiver which will fetch current device location from OS. Accuracy and battery optimisation can vary from high to low based on interval, displacement and accuracy values provided in CTGeofenceSettings.</li>
+								</ul>
+							</li>
+							<li><big><span class="badge badge-light">Geofence Monitoring Count : </span></big> Default is 50. <br>
+								<ul>
+									<li>As per android documentation You can have multiple active geofences, with a limit of 100 per app, per device user.</li>
+									<li>SDK lets the App decide how many geofences they want to monitor through CleverTap by setting this value.</li>
+									<li>Use values in the range of 1-100</li>
+								</ul>
+							</li>
+							<li><big><span class="badge badge-light">Interval Time : </span></big> Default is 30 minutes. Applicable for both fetch modes. (Enter Values in milliseconds)<br>
+								<ul><li>Values less than 30 minutes will be ignored by SDK. SDK will then handover this value to Google Location API</li></ul>
+							</li>
+							<li><big><span class="badge badge-light">Fastest Interval Time : </span></big> Default is 30 minutes. Applicable only for FETCH_CURRENT_LOCATION_PERIODIC. (Enter Values in milliseconds) <br>
+								<ul><li>Values less than 30 minutes will be ignored by SDK. SDK will then handover this value to Google Location API</li></ul>
+							</li>
+							<li><big><span class="badge badge-light">Smallest Displacement Distance : </span></big> Default is 200 meters. Applicable only for FETCH_CURRENT_LOCATION_PERIODIC. (Enter values in meters) <br>
+								<ul><li>Values less than 200 meters will be ignored by SDK. SDK will then handover this value to Google Location API</li></ul>
+							</li>
+							<li><big><span class="badge badge-light">Backgroung Location : </span></big> Default is true. <br>
+								<ul>
+									<li>When true, this will allow SDK to register background location updates through any of the above mentioned fetch modes.</li>
+									<li>When false, this will inform SDK to fetch location only in foreground when the app is launched or through triggerLocation() and not to register background location updates through any of the above mentioned fetch modes.</li>
+								</ul>
+							</li>
+							<li><big><span class="badge badge-light">Notification Responsiveness Time : </span></big> Default is 0 milliseconds.<br>
+								<ul><li>Sets the best-effort notification responsiveness of the geofence. Setting a big responsiveness value, for example 5 minutes(300000 milliseconds), can save power significantly. However, setting a very small responsiveness value, for example 5 seconds, doesn't necessarily mean you will get notified right after the user enters or exits a geofence: internally, the geofence might adjust the responsiveness value to save power when needed.</li></ul>
+							</li>
+						</ul>
+					</section><!--//section-->
+					
+					<section class="docs-section" id="item-7-2">
+						<h2 class="section-heading">Affected Files</h2>
+						<ul class="nav nav-tabs" id="myTab" role="tablist">
+							<li class="nav-item">
+							  <a class="nav-link active" id="manifest3-tab" data-toggle="tab" href="#manifest3" role="tab" aria-controls="manifest3" aria-selected="true">AndroidManifest.xml</a>
+							</li>
+							<li class="nav-item">
+							  <a class="nav-link" id="build3-tab" data-toggle="tab" href="#build3" role="tab" aria-controls="build3" aria-selected="false">Build.gradle(App)</a>
+							</li>
+							<li class="nav-item dropdown">
+							  <a class="nav-link dropdown-toggle" id="drop-lang4" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Lauching Activity</a>
+							  <div class="dropdown-menu" aria-labelledby="drop-lang4">
+								  <a class="dropdown-item" data-toggle="pill" href="#java4">Java</a>
+								  <a class="dropdown-item" data-toggle="pill" href="#kotlin4">Kotlin</a>
+							  </div>
+							</li>
+						</ul>
+						<div class="tab-content" id="myTabContent">
+							<div class="tab-pane fade show active" id="manifest3" role="tabpanel" aria-labelledby="manifest3-tab">
+								<code>
+									&lt;!-- Permissions --&gt;<br>
+									
+									&lt;uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /&gt;<br>
+									&lt;uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" /&gt;<br>
+									&lt;uses-permission android:name="android.permission.WAKE_LOCK" /&gt;<br>
+									&lt;uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/&gt;
+
+								</code>
+							</div>
+							<div class="tab-pane fade" id="build3" role="tabpanel">
+							<code><br>
+								implementation 'com.clevertap.android:clevertap-geofence-sdk:1.0.2'<br>
+								implementation 'com.clevertap.android:clevertap-android-sdk:4.1.0'<br>
+								implementation 'com.google.android.gms:play-services-location:17.0.0'<br>
+								implementation 'androidx.work:work-runtime:2.3.4' // required for FETCH_LAST_LOCATION_PERIODIC<br>
+								implementation 'androidx.concurrent:concurrent-futures:1.0.0' // required for FETCH_LAST_LOCATION_PERIODIC<br>
+
+							</code>
+							</div>
+							<div class="tab-pane fade" id="java4" role="tabpanel" >
+								<code>
+									<br>\\Java<br>
+									CTGeofenceSettings ctGeofenceSettings = new CTGeofenceSettings.Builder()<br>&nbsp;
+										.enableBackgroundLocationUpdates(bgLocation)//boolean to enable background location updates<br>&nbsp;
+										.setLogLevel(logLevel)//Log Level<br>&nbsp;
+										.setLocationAccuracy(accuracy)//byte value for Location Accuracy<br>&nbsp;
+										.setLocationFetchMode(fetchMode)//byte value for Fetch Mode<br>&nbsp;
+										.setGeofenceMonitoringCount(geofenceCount)//int value for number of Geofences CleverTap can monitor<br>&nbsp;
+										.setInterval(interval)//long value for interval in milliseconds<br>&nbsp;
+										.setFastestInterval(fastestInterval)//long value for fastest interval in milliseconds<br>&nbsp;
+										.setSmallestDisplacement(displacement)//float value for smallest Displacement in meters<br>&nbsp;
+										.setGeofenceNotificationResponsiveness(geofenceNotificationResponsiveness)// int value for geofence notification responsiveness in milliseconds<br>&nbsp;
+										.build();<br><br>
+ 
+									CTGeofenceAPI.getInstance(getApplicationContext()).init(ctGeofenceSettings,cleverTapAPI);<br>
+
+								</code>
+							</div>
+							<div class="tab-pane fade" id="kotlin4" role="tabpanel" >
+								<code>
+									<br>//Kotlin<br>
+									var ctGeofenceSettings = CTGeofenceSettings.Builder()<br>&nbsp;
+										.enableBackgroundLocationUpdates(bgLocation)//boolean to enable background location updates<br>&nbsp;
+										.setLogLevel(logLevel)//Log Level<br>&nbsp;
+										.setLocationAccuracy(accuracy)//byte value for Location Accuracy<br>&nbsp;
+										.setLocationFetchMode(fetchMode)//byte value for Fetch Mode<br>&nbsp;
+										.setGeofenceMonitoringCount(geofenceCount)//int value for number of Geofences CleverTap can monitor<br>&nbsp;
+										.setInterval(interval)//long value for interval in milliseconds<br>&nbsp;
+										.setFastestInterval(fastestInterval)//long value for fastest interval in milliseconds<br>&nbsp;
+										.setSmallestDisplacement(displacement)//float value for smallest Displacement in meters<br>&nbsp;
+										.setGeofenceNotificationResponsiveness(geofenceNotificationResponsiveness)// int value for geofence notification responsiveness in milliseconds<br>&nbsp;
+										.build()<br><br>
+									 
+									CTGeofenceAPI.getInstance(getApplicationContext()).init(ctGeofenceSettings, cleverTapAPI) <br>
+									
+								</code>
+							</div>
+						  </div>
+					</section><!--//section-->
+					<div class="callout-block callout-block-info">
+                            
+						<div class="content">
+							<h4 class="callout-title">
+								<span class="callout-icon-holder mr-1">
+									<i class="fas fa-info-circle"></i>
+								</span><!--//icon-holder-->
+								Note : 
+							</h4>
+							<ul>
+								<li>CleverTapAPI needs to be initialized before the CTGeofenceAPI object is created because the object of CleverTapAPI is required to initialize the CleverTap Android Geofence SDK.</li>
+								<li>Runtime location permissions needed for SDK to work.</li>
+								<li>CTGeofenceAPI is automatically activated once the init() method has been called.</li>
+								<li>CleverTap Android Geofence SDK raises the “Geofence Cluster Entered” and “Geofence Cluster Exited” events automatically. The app cannot raise these methods manually.</li>
+							</ul>
+						</div><!--//content-->
+					</div><!--//callout-block-->
+			    </article><!--//docs-article-->
+			    
+			    
+			    <article class="docs-article" id="section-8">
+				    <header class="docs-header">
+					    <h1 class="docs-heading">Audit Report</h1>
+					    <section class="docs-intro">
+						    <p>An auditing function which tracks all background actions and events that happen within a minute of your application launch, helpful for reviewing the clevertap activities performed. To activate the audit report fucntion follow these steps : </p>
+							<p><ol>
+								<li><code> File > New > Clevertap Assistant > Audit Report. </code>Click on the Audit report. &nbsp; <a href="assets/images/J/IMG25.png" data-title="Audit Report" data-toggle="lightbox"> View</a></li>
+								<li>The Plugin will add relevnt codes in to your project and will syn the app.</li>
+								<li>Run the app onto the device or the emulator.</li>
+								<li>Do the login sign out and relogin in under one minute for the plugin to capture the relevant details.</li>
+							</ol></p>
+							<p><h4>Affected Files.</h4></p>
+							<ul class="nav nav-tabs" id="myTab" role="tablist">
+								<li class="nav-item">
+									<a class="nav-link active" id="Audit-manifest-tab" data-toggle="tab" href="#Audit-manifest" role="tab" aria-controls="Audit-manifest" aria-selected="true">AndroidManifest.xml</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" id="Audit-buildA-tab" data-toggle="tab" href="#Audit-buildA" role="tab" aria-controls="Audit-buildA" aria-selected="true">Build.gradle(app)</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" id="Audit-buildB-tab" data-toggle="tab" href="#Audit-buildB" role="tab" aria-controls="Audit-buildB" aria-selected="true">Build.gradle(project)</a>
+								</li>
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle" id="Audit-drop-lang" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Lauching Activity</a>
+									<div class="dropdown-menu" aria-labelledby="Audit-drop-lang">
+										<a class="dropdown-item" data-toggle="pill" href="#Audit-java">Java</a>
+										<a class="dropdown-item" data-toggle="pill" href="#Audit-kotlin">Kotlin</a>
+									</div>
+								  </li>
+							</ul>
+							<div class="tab-content" id="myTabContent">
+								<div class="tab-pane fade show active" id="Audit-manifest" role="tabpanel" aria-labelledby="Audit-manifest-tab">
+									<code><br>
+										&lt;uses-permission android:name="android.permission.READ_LOGS" /&gt; <br>
+										&lt;uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /&gt; <br><br>
+									</code>
+								</div>
+								<div class="tab-pane fade" id="Audit-buildA" role="tabpanel" aria-labelledby="Audit-bulidA-tab">
+									<code><br>
+										implementation 'com.github.Anu2897:ReportGenerate-Android:1.1.4'<br>
+									<br></code>
+								</div>
+								<div class="tab-pane fade" id="Audit-buildB" role="tabpanel" aria-labelledby="Audit-buildB-tab">
+									<code><br>
+										allprojects { <br>&nbsp;
+											repositories { <br>&nbsp;&nbsp;
+												maven { url 'https://jitpack.io' }   //added by CleverTap Assistant <br>&nbsp;&nbsp;
+												google() <br>&nbsp;&nbsp;
+												jcenter() <br>&nbsp;
+											} <br>
+										} <br><br>
+									</code>
+								</div>
+								<div class="tab-pane fade" id="Audit-java" role="tabpanel" >
+									<code><br>
+										import android.content.Context;<br>
+										import com.example.getauditreport.ReportGenerate; <br><br>
+
+										public class MainActivity extends AppCompatActivity {<br><br>&nbsp;
+
+											@Override<br>&nbsp;
+											protected void onCreate(Bundle savedInstanceState) {<br>&nbsp;&nbsp;
+												Context context = getApplicationContext();   //added by CleverTap Assistant<br>&nbsp;&nbsp;
+												super.onCreate(savedInstanceState);<br>&nbsp;&nbsp;
+												setContentView(R.layout.activity_main);<br>&nbsp;&nbsp;
+												ReportGenerate.run(context);   //added by CleverTap Assistant<br>&nbsp;&nbsp;
+												clevertapDefaultInstance.setDebugLevel(CleverTapAPI.LogLevel.DEBUG);   //added by CleverTap Assistant<br>&nbsp;
+											}<br>
+										}<br><br>
+									</code>
+								</div>
+								<div class="tab-pane fade" id="Audit-kotlin" role="tabpanel" >
+									<code><br>
+										import android.content.Context;<br>
+										import com.example.getauditreport.ReportGenerate; <br><br>
+										class MainActivity : AppCompatActivity() { <br><br>&nbsp;
+											override fun onCreate(savedInstanceState: Bundle?) {<br>&nbsp;&nbsp;
+												var context = getApplicationContext()<br>&nbsp;&nbsp;
+												super.onCreate(savedInstanceState)<br>&nbsp;&nbsp;
+												setContentView(R.layout.activity_main)<br>&nbsp;&nbsp;
+												ReportGenerate.run(context)<br>&nbsp;&nbsp;
+												CleverTapAPI.setDebugLevel(CleverTapAPI.LogLevel.DEBUG)<br>&nbsp;
+											}<br>
+										}<br><br>
+									</code>
+								</div>
+							</div>
+							<br>
+							<p>To view the resulting Audit report with all its details go to <code>View > Tool Window > Device File Explorer. </code> &nbsp; <a href="assets/images/J/IMG26.png" data-title="Audit Report" data-toggle="lightbox"> View</a></p>
+							<p>Once the Device file explorer is open navigate to <code>data > data > (project package name) > files > AuditReport.txt</code> to view and download the Audit Report.</p>
+							<div class="callout-block callout-block-info">
+								<div class="content">
+									<h4 class="callout-title">
+										<span class="callout-icon-holder mr-1">
+											<i class="fas fa-info-circle"></i>
+										</span><!--//icon-holder-->
+										Note : 
+									</h4>
+									<ul>
+										<li>The Audit Report captures all the details upto 1 minunte from app launch and is available after the time passed.</li>
+										<li>It also requires a minimum sdk version 25 in build.gradle .</li>
+										<li>It is advisable to clear the logs and studio logcat to get a clear and informative report.</li>
+									</ul>
+								</div><!--//content-->
+							</div><!--//callout-block-->
+						</section><!--//docs-intro-->
+				    </header>
+			    </article><!--//docs-article-->
+
+			    <footer class="footer">
+				    <div class="container text-center py-5">
+				        <!-- <ul class="social-list list-unstyled pt-4 mb-0">
+						    <li class="list-inline-item"><a href="#"><i class="fab fa-github fa-fw"></i></a></li> 
+				            <li class="list-inline-item"><a href="#"><i class="fab fa-twitter fa-fw"></i></a></li>
+				            <li class="list-inline-item"><a href="#"><i class="fab fa-slack fa-fw"></i></a></li>
+				            <li class="list-inline-item"><a href="#"><i class="fab fa-product-hunt fa-fw"></i></a></li>
+				            <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f fa-fw"></i></a></li>
+				            <li class="list-inline-item"><a href="#"><i class="fab fa-instagram fa-fw"></i></a></li>
+				        </ul>//social-list -->
+				    </div>
+			    </footer>
+		    </div> 
+	    </div>
+    </div><!--//docs-wrapper-->
+    
+   
+       
+    <!-- Javascript -->          
+    <script src="assets/plugins/jquery-3.4.1.min.js"></script>
+    <script src="assets/plugins/popper.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.js"></script>  
+    
+    
+    <!-- Page Specific JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+    <script src="assets/js/highlight-custom.js"></script> 
+    <script src="assets/plugins/jquery.scrollTo.min.js"></script>
+    <script src="assets/plugins/lightbox/dist/ekko-lightbox.min.js"></script> 
+    <script src="assets/js/docs.js"></script> 
+
+</body>
+</html> 
+
