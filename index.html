@@ -71,7 +71,7 @@
 				    <li class="nav-item section-title"><a class="nav-link scrollto active" href="#section-1"><span class="theme-icon-holder mr-2"><i class="fas fa-map-signs"></i></span>Introduction</a></li>
 				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-2"><span class="theme-icon-holder mr-2"><img src="assets/images/J/Install.png" style="max-height: 20px;"></i></span>Installation</a></li>
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-1">Manual Installation</a></li>
-				    <!-- <li class="nav-item"><a class="nav-link scrollto" href="#item-2-2">Android Plugin Marketplace</a></li> -->
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-2">Android Plugin Marketplace</a></li>
 				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-3"><span class="theme-icon-holder mr-2"><i class="fas fa-box"></i></span>Basic Integration</a></li>
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-1">Details and Values</a></li>
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-2">Affected Files</a></li>
@@ -103,7 +103,7 @@
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-7-1">Details and Values</a></li>
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-7-2">Affected Files</a></li>
 				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-8"><span class="theme-icon-holder mr-2"><i class="fas fa-tablet-alt"></i></span>Audit Report</a></li>
-
+					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-9"><span class="theme-icon-holder mr-2"><i class="fas fa-tablet-alt"></i></span>Push Templates</a></li>
 			    </ul>
 
 		    </nav><!--//docs-nav-->
@@ -112,7 +112,7 @@
 		    <div class="container">
 			    <article class="docs-article" id="section-1">
 				    <header class="docs-header">
-					    <h1 class="docs-heading">Introduction <span class="docs-time">Last updated: 2021-06-18</span></h1>
+					    <h1 class="docs-heading">Introduction <span class="docs-time">Last updated: 2021-07-22</span></h1>
 					    <section class="docs-intro">
 						    <p>The Clevertap Assistant Plugin was developed specifically as a helping tool to developers to assist them in easy and fast paced integration and use of various functionalities provided by Clevertap into your android appliaction. Fuctionalities such as integration of clevertap into your application, push notifications, geofence etc can be coded inside your application with few easy clicks and the plugin takes care of the code insertion.</p>
 							<p>The plugin can function seamlessly on either java or kotlin being the development environment. Also, even more it contains utilities to speed up coding by adding user and event property code snippet on the go at desired points.</p>
@@ -128,7 +128,7 @@
 				    </header>
 				     <section class="docs-section" id="item-2-1">
 						<h2 class="section-heading">Manual Installation</h2>
-						<p>You can download the plugin files from the <u>download</u> button above or ask your customer success manager for an updated version. Follow the steps to manually install the plugin :</p>
+						<p>You can download the plugin files from the <u>Android Studio Plugin Market Place</u> or ask your customer success manager for an updated version. Follow the steps to manually install the plugin :</p>
 						<ol>
 							<li>Process begins with downloading the plugin .zip file into your machine. Then open android Studio and navigate to plugins through any of these steps.
 								<p><code>Android Studio > Configure > Plugin.</code> <a href="assets/images/J/IMG.png" data-title="Plugin" data-toggle="lightbox">&nbsp; View</a> </p>
@@ -144,10 +144,12 @@
 						</ol>
 					</section><!--//section-->
 					
-					<!-- <section class="docs-section" id="item-2-2">
+					<section class="docs-section" id="item-2-2">
 						<h2 class="section-heading">Android Marketplace</h2>
 						<p>This option provides a single click download and install option into your android studio and you can begin use instantly.</p>
-					</section>//section -->
+						<p>Navigate to plugins in android studio and search for CleverTap Assistant in the Market Place tab. </p>
+						<p><br><img class="figure-img img-fluid shadow rounded" src="assets/images/J/IMG29.png" alt style="width: 400px;"></p>
+					</section>
 					
 					<div class="callout-block callout-block-info">
                             
@@ -379,7 +381,7 @@
 				    </header>
 				     <section class="docs-section" id="item-5-1">
 						<h2 class="section-heading">Push Integration</h2>
-						<p>The easiest way to send push notifications is to use the default implementation by CleverTap, however, if you have your own implementation or use another push provider, refer to <a class="scrollto" href="#section-5">Custom Android Push Notifications Handling.</a></p>
+						<p>The easiest way to send push notifications is to use the default implementation by CleverTap, however, if you have your own implementation you can implement scenaio 1.</p>
 						<p><code> File > New > Clevertap Assistant > Push Notification. </code> &nbsp; <a href="assets/images/J/IMG12.png" data-title="Push Integration" data-toggle="lightbox"> View</a></p>
 						<p><h4>Scenario 1 : 'Yes' is Selected </h4>
 							<br><img class="figure-img img-fluid shadow rounded" src="assets/images/J/IMG28.png" alt style="width: 600px;">
@@ -1159,6 +1161,71 @@
 						</section><!--//docs-intro-->
 				    </header>
 			    </article><!--//docs-article-->
+
+				<article class="docs-article" id="section-9">
+					<header class="docs-header">
+					    <h1 class="docs-heading">Push Templates</h1>
+					</header>
+					<section class="docs-intro">
+						<p>Push Templates SDK helps you engage with your users using fancy push notification templates built specifically to work with CleverTap. The Plugin helps you test such templates for push notification during the development phase or for testing purposes directly throught the code.
+							The Plugin provides a preview of the actual notifications which will be sent to the user through the dashboard. Follow these steps to try different available push templates :</p>
+						<p>
+							<h5>Step 1: </h4>To add push templates into your project for testing.&nbsp;<code> Right Click > Push Templates > Integrate. </code> &nbsp; <a href="assets/images/J/IMG30.png" data-title="Push Templates" data-toggle="lightbox"> View</a><br>
+							<h5>Step 2: </h4>To test different notification push templates onto your physical device or emulator.&nbsp;<code> Right Click > Push Templates > Test. </code> &nbsp; <a href="assets/images/J/IMG31.png" data-title="Push Templates" data-toggle="lightbox"> View</a><br>
+							<h5>Step 3: </h4>Select from available types and enter the values required.&nbsp; <a href="assets/images/J/IMG32.png" data-title="Push Templates" data-toggle="lightbox"> View</a><br>
+							<p><br><img class="figure-img img-fluid shadow rounded" src="assets/images/J/IMG33.png" alt style="width: 400px;"></p>
+						</p><br>
+						<p><h4>Affected Files.</h4></p>
+						<ul class="nav nav-tabs" id="myTab" role="tablist">
+							<li class="nav-item">
+								<a class="nav-link active" id="PushT-manifest-tab" data-toggle="tab" href="#PushT-manifest" role="tab" aria-controls="PushT-manifest" aria-selected="true">AndroidManifest.xml</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" id="PushT-buildA-tab" data-toggle="tab" href="#PushT-buildA" role="tab" aria-controls="PushT-buildA" aria-selected="true">Build.gradle(app)</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" id="PushT-buildB-tab" data-toggle="tab" href="#PushT-buildB" role="tab" aria-controls="PushT-buildB" aria-selected="true">Build.gradle(project)</a>
+							</li>
+						</ul>
+						<div class="tab-content" id="myTabContent">
+							<div class="tab-pane fade show active" id="PushT-manifest" role="tabpanel" aria-labelledby="PushT-manifest-tab">
+								<code><br>
+									&lt;!-- Added by CleverTap Assistant--&gt;<br>
+									&lt;service<br>&nbsp;
+										android:name="com.clevertap.pushtemplates.PTNotificationIntentService"<br>&nbsp;
+										android:exported="false"&gt;<br>&nbsp;
+										&lt;intent-filter&gt;<br>&nbsp;&nbsp;
+											&lt;action android:name="com.clevertap.PT_PUSH_EVENT"/&gt;<br>&nbsp;
+										&lt;/intent-filter&gt;<br>
+									&lt;/service&gt;<br><br>
+										&lt;!-- Added by CleverTap Assistant--&gt;<br>
+									&lt;receiver<br>&nbsp;
+										android:name="com.clevertap.pushtemplates.PTPushNotificationReceiver"<br>&nbsp;
+										android:exported="false"<br>&nbsp;
+										android:enabled="true"&gt;<br>&nbsp;
+									&lt;/receiver&gt;<br><br>
+									&lt;!-- Added by CleverTap Assistant--&gt;<br>
+									&lt;receiver<br>&nbsp;
+										android:name="com.clevertap.pushtemplates.PushTemplateReceiver"<br>&nbsp;
+										android:exported="false"<br>&nbsp;
+										android:enabled="true"&gt;<br>
+									&lt;/receiver&gt;<br><br>
+								</code>
+							</div>
+							<div class="tab-pane fade" id="PushT-buildA" role="tabpanel" aria-labelledby="PushT-bulidA-tab">
+								<code><br>
+									implementation 'com.clevertap.android:push-templates:0.0.8'   //added by CleverTap Assistant<br>
+									implementation 'com.github.KevalMajethiya:PushTemplateLibrary:0.1.0'   //added by CleverTap Assistant<br><br>
+								</code>
+							</div>
+							<div class="tab-pane fade" id="PushT-buildB" role="tabpanel" aria-labelledby="PushT-buildB-tab">
+								<code><br>
+									maven { url 'https://jitpack.io' }   //added by CleverTap Assistant<br><br>
+								</code>
+							</div>
+						</div>
+					</section>
+				</article>
 
 			    <footer class="footer">
 				    <div class="container text-center py-5">
